@@ -595,9 +595,19 @@ import { map } from 'rxjs/operators'
 
 const mapTwice = <T,R>(fn: (value: T, index: number) => R) pipe(map(fn), map(fn));
 
+
+const rx=Rx;
+
+rx.Observable.of(1,2,3).map(x => x + '!!!');
+
+const { of } = rxjs;
+const { map } = rxjs.operators;
+of(1,2,3).pipe).pipe(map(x => x + '!!!'));
 ```
 
 ```sh
+npm i -g rxjs-tslint rxjs-5-to-6-migrate -p [path/to/tsconfig.json]
+
 npm install @reactivex/rxjs
 npm install @reactivex/rxjs@5.0.0-beta.1
 ```
